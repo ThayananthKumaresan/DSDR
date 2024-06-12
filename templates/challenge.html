@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ challenge['title'] }}</h2>
+<p>{{ challenge['description'] }}</p>
+<p>Deadline: {{ challenge['deadline'] }}</p>
+<form method="POST">
+    <div>
+        <label for="answer">Answer</label><br>
+        <textarea id="answer" name="answer" rows="5" required></textarea>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Leaderboard</h2>
+<table>
+    <tr>
+        <th>User</th>
+        <th>Team</th>
+        <th>Challenge</th>
+        <th>Answer</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for submission in submissions %}
+    <tr>
+        <td>{{ submission['username'] }}</td>
+        <td>{{ submission['team_name'] }}</td>
+        <td>{{ submission['title'] }}</td>
+        <td>{{ submission['answer'] }}</td>
+        <td>{{ submission['timestamp'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
